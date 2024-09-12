@@ -1,0 +1,247 @@
+/* General reset */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+}
+
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+}
+    
+.nav-bar ul li{
+    margin-left: 20px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+}
+
+.nav-bar ul li:hover {
+    color: #007bff;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.search-box input[type="text"] {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+
+  .search-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+
+  .search-button button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: center;
+    /* margin: 20px;
+    margin-left: 150px; */
+
+}  
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 5px;
+}
+
+/* Card styling */
+.card {
+  width: 300px;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card image styling */
+.card-img img {
+  width: 100%;
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the entire area */
+  display: block;
+}
+
+/* Card data styling */
+.card-data {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-data h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.card-data h3:last-child {
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+/* Styles for the filter button */
+.filter #filter-btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#filter-btn button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#filter-btn button:hover {
+  background-color: #45a049;
+}
+
+/* Styles for the refresh button */
+.refresh {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.refresh button {
+  background-color: #2196F3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.refresh button:hover {
+  background-color: #0b7dda;
+}
+
+/* Styles for the overall layout */
+.filter, .refresh {
+  margin-bottom: 15px;
+}
+
+
+/* Shimmer effect animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Grid layout for shimmer cards */
+.shimmer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.shimmer-card-container {
+  margin: 10px;
+}
+
+.shimmer-card {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.shimmer-card-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.shimmer-card-data {
+  padding: 10px;
+}
+
+.shimmer-line {
+  width: 90%;
+  height: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+/* Common shimmer effect styling */
+.shimmer-effect {
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #e0e0e0 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 1000px 100%;
+  display: inline-block;
+  position: relative;
+  animation: shimmer 1.5s infinite linear;
+}
