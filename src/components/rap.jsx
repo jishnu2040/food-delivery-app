@@ -2,7 +2,7 @@ import React from 'react'
 
 const rap = () => {
   return (
-    <div>rap</div>
+    <div>rap the content </div>
   )
 }
 
