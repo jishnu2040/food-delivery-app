@@ -1,5 +1,5 @@
 export const ShimmerRestaurant = () => {
-    const shimmerArray = new Array(8).fill(null); // Create an array with 8 elements
+    const shimmerArray = new Array(16).fill(null); // Create an array with 8 elements
     
     return (
       <div className="shimmer-grid">
